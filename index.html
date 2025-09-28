@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安浦マルシェ | .4nk</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-emoji">🌾</span>
+                    安浦マルシェ
+                </div>
+                <div class="cart-icon" onclick="toggleCart()">
+                    🛒
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Background Image Area -->
+    <section class="hero-section">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">安浦の美味しいもの<br>集めました</h1>
+            <p class="hero-subtitle">
+                私たちの地域で育った新鮮な食材と、愛情込めて作られたハンドメイド商品を直接お届けします。<br>
+                自然の恵みと職人の技を、あなたの暮らしにお届けします。
+            </p>
+            <button class="hero-cta" onclick="scrollToProducts()">商品を見る</button>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="nav-content">
+                <button class="category-btn active" data-category="all">すべて</button>
+                <button class="category-btn" data-category="food">食品</button>
+                <button class="category-btn" data-category="handmade">ハンドメイド</button>
+                <button class="category-btn" data-category="other">その他</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">おすすめ商品</h2>
+                    <p class="section-subtitle">地元で愛される逸品をお選びください</p>
+                </div>
+                
+                <!-- Products Grid -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>🛒 ショッピングカート</h2>
+                <button class="close-cart" onclick="closeCart()">✕</button>
+            </div>
+            <div class="cart-body">
+                <div id="cartItems">
+                    <!-- Cart items will be dynamically inserted here -->
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <div class="total-price" id="totalPrice">合計: ¥0</div>
+                    <button class="checkout-btn" onclick="checkout()">
+                        購入手続きへ進む
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🌾 安浦マルシェ</h3>
+                    <p>このサイトは安浦ハッカソン2025用に作成されました。</p>
+                </div>
+                <div class="footer-section">
+                    <h4>カテゴリ</h4>
+                    <ul>
+                        <li><a href="#" data-category="food">食品</a></li>
+                        <li><a href="#" data-category="handmade">ハンドメイド</a></li>
+                        <li><a href="#" data-category="other">その他</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>お客様サポート</h4>
+                    <ul>
+                        <li><a href="#">お問い合わせ</a></li>
+                        <li><a href="#">配送について</a></li>
+                        <li><a href="#">返品・交換</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>お支払い方法</h4>
+                    <div class="payment-methods">
+                        <span>💳 クレジットカード</span>
+                        <span>🏧 銀行振込</span>
+                        <span>📮 代金引換</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
